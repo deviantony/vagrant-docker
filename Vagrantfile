@@ -6,7 +6,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sour
 apt-get update && apt-get install -y docker-engine=1.9.1-0~trusty;
 service docker stop;
 rm -rf /etc/docker/key.json
-echo 'DOCKER_OPTS="-H 0.0.0.0:2376 -H unix:///var/run/docker.sock"' | tee -a /etc/default/docker;
+echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock"' | tee -a /etc/default/docker;
 service docker start;
 SCRIPT
 
