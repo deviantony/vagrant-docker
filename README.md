@@ -12,5 +12,5 @@ Use the following commands to access the Docker host:
 
 ```
 $ docker run --rm -it --privileged --name docker19 -v ${PWD}:/certs docker:1.9-dind sh
-# docker -H 10.0.7.10:2376 info
+# docker -H 10.0.7.10:2375 info
 ```
