@@ -4,7 +4,7 @@ Docker on Vagrant to experiment with different versions/settings of Docker.
 
 That's all folks !
 
-This version creates a Docker engine using the latest version with TLS enabled.
+This version creates a Docker engine 1.9 with TLS enabled.
 
 Certs will be available in the root of this directory after first boot.
 
