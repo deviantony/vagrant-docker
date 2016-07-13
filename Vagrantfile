@@ -11,9 +11,9 @@ service docker start;
 SCRIPT
 
 Vagrant.configure(2) do |config|
-  config.vm.define "docker_engine" do |config|
+  config.vm.define "docker_engine_19" do |config|
     config.vm.box = "ubuntu/trusty64"
-    config.vm.hostname = "docker-engine"
+    config.vm.hostname = "docker-engine-19"
     config.vm.network "private_network", ip: "10.0.7.10"
     config.vm.provision "shell", inline: $prepare_docker_engine_script
     config.vm.synced_folder ".", "/vagrant", disabled: true
