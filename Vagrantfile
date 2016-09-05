@@ -6,7 +6,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sour
 apt-get update && apt-get install -y docker-engine=1.9.1-0~trusty;
 service docker stop;
 rm -rf /etc/docker/key.json
-echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock"' | tee -a /etc/default/docker;
+echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock --ip 10.0.7.9"' | tee -a /etc/default/docker;
 service docker start;
 SCRIPT
 $prepare_docker_engine_script_110 = <<SCRIPT
@@ -17,7 +17,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sour
 apt-get update && apt-get install -y docker-engine=1.10.3-0~trusty;
 service docker stop;
 rm -rf /etc/docker/key.json
-echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock"' | tee -a /etc/default/docker;
+echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock --ip 10.0.7.10"' | tee -a /etc/default/docker;
 service docker start;
 SCRIPT
 $prepare_docker_engine_script_111 = <<SCRIPT
@@ -28,7 +28,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sour
 apt-get update && apt-get install -y docker-engine=1.11.2-0~trusty;
 service docker stop;
 rm -rf /etc/docker/key.json
-echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock"' | tee -a /etc/default/docker;
+echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock --ip 10.0.7.11"' | tee -a /etc/default/docker;
 service docker start;
 SCRIPT
 $prepare_docker_engine_script_112 = <<SCRIPT
@@ -39,7 +39,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sour
 apt-get update && apt-get install -y docker-engine;
 service docker stop;
 rm -rf /etc/docker/key.json
-echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock"' | tee -a /etc/default/docker;
+echo 'DOCKER_OPTS="-H 0.0.0.0:2375 -H unix:///var/run/docker.sock --ip 10.0.7.12"' | tee -a /etc/default/docker;
 service docker start;
 SCRIPT
 
